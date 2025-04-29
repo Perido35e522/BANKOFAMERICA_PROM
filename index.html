@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank of Americal - Online Banking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Bank of Americal</h1>
+  <p>Secure Online Banking</p>
+  <button id="darkModeToggle">Toggle Dark Mode</button>
+</header>
+
+<div class="container">
+  <div id="login" class="login visible">
+    <h2>Log in to your account</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div id="dashboard" class="dashboard">
+    <nav>
+      Logged in as: <strong>Katrina Law</strong> | Account: 0123456789012345
+    </nav>
+
+    <div class="account-info">
+      <p>Account Type: Premier Elite Account</p>
+      <p class="balance">Balance: $5,000,000,000,000.00</p>
+      <p class="frozen">This account has been frozen since April 2023. All incoming funds are held.</p>
+    </div>
+
+    <div class="transactions">
+      <h3>Recent Transactions</h3>
+      <table>
+        <tr><th>Date</th><th>Description</th><th>Amount</th><th>To</th></tr>
+        <tr><td>2023-03-01</td><td>Wire Transfer</td><td>$500,000,000.00</td><td>XYZ Global</td></tr>
+        <tr><td>2022-11-11</td><td>Deposit</td><td>$4,000,000,000,000.00</td><td>Private Equity</td></tr>
+      </table>
+    </div>
+
+    <div class="cards">
+      <h3>Your Cards</h3>
+      <div class="card">
+        <img src="images/debit_card.png" alt="Debit Card" />
+        <p>Debit Card: 1234 5678 9012 3456</p>
+      </div>
+      <div class="card">
+        <img src="images/credit_card.png" alt="Credit Card" />
+        <p>Credit Card: 9876 5432 1098 7654</p>
+      </div>
+    </div>
+
+    <div class="chat">
+      <h3>Customer Support</h3>
+      <textarea id="message" placeholder="Type your message to support..."></textarea>
+      <button onclick="sendMessage()">Send Message</button>
+      <div id="response"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
